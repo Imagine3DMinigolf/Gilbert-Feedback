@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How was your round?</title>
+    <title>Was your experience up to par?</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -42,10 +42,21 @@
 
         .logo-placeholder {
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 24px; 
             font-weight: bold;
             color: var(--primary-green);
+            line-height: 1.2; /* Keeps the two lines close together */
         }
+
+        .logo-sub {
+            display: block; /* Forces it to the next line */
+            font-size: 16px; /* Smaller font for the location */
+            font-weight: 600; /* Semi-bold */
+            color: #666; /* Grey color to separate it from the main title */
+            margin-top: 5px; /* A tiny bit of space */
+        }
+
+
 
         h1 {
             font-size: 24px;
@@ -108,7 +119,7 @@
 
         .footer {
             margin-top: 30px;
-            font-size: 12px;
+            font-size: 14px;
             color: #999;
         }
 
@@ -117,24 +128,27 @@
 <body>
 
     <div class="container">
-        <div class="logo-placeholder">⛳ GOLF COURSE NAME</div>
+        <div class="logo-placeholder">
+        🦄 Imagine 3D Mini Golf 🐉
+        <span class="logo-sub">Gilbert</span>
+    </div>
 
-        <h1>How was your round?</h1>
-        <p>We'd love to hear about your experience on the course today.</p>
+        <h1>Was your experience up to par? </h1>
+        <p>We'd love to hear from you!</p>
 
         <a href="#" id="goodLink" class="btn btn-positive" onclick="handleReview()">
             <i class="fa-solid fa-star icon"></i>
-            It was great!
+            Hole in one! ⛳
         </a>
 
         <a href="#" id="badLink" class="btn btn-negative" onclick="handleFeedback()">
             <i class="fa-solid fa-comment-dots icon"></i>
-            Could be better
+            Not up to par?
         </a>
     </div>
 
     <div class="footer">
-        Thanks for playing with us!
+        Thank you for supporting a local family owned business!
     </div>
 
     <script>
@@ -146,9 +160,9 @@
         const googleReviewURL = "https://g.page/r/CfAtY9vlSO8CEBE/review";
 
         // 2. Configure the Email Settings
-        const ownerEmail = "imagine3dminigolf@gmail.com"; // Put the owner's email here
+        const ownerEmail = "imagine3dminigolf@gmail.com"; 
         const emailSubject = "Feedback regarding my round";
-        const emailBody = "Hi, I wanted to share some feedback about my experience today...";
+        const emailBody = "Hi, here is my feedback:\n\nIssue:\n\nContact info (optional):";
 
         // ==========================================
         
@@ -163,4 +177,5 @@
         }
     </script>
 </body>
+
 </html>
